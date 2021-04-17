@@ -1,11 +1,11 @@
-import { InMemoryUserFactory } from './InMemoryUserFactory'
-import { InMemoryUserRepository } from './InMemoryUserRepository'
-import { User } from './User'
-import { UserApplicationService } from './UserApplicationService'
-import { UserId } from './UserId'
-import { UserName } from './UserName'
-import { UserService } from './UserService'
-import { UserUpdateCommand } from './UserUpdateCommand'
+import { InMemoryUserFactory } from './infrastructure/user/InMemoryUserFactory'
+import { InMemoryUserRepository } from './infrastructure/user/InMemoryUserRepository'
+import { User } from './domain/user/User'
+import { UserApplicationService } from './application/user/UserApplicationService'
+import { UserId } from './domain/user/UserId'
+import { UserName } from './domain/user/UserName'
+import { UserService } from './domain/user/UserService'
+import { UserUpdateCommand } from './application/user/UserUpdateCommand'
 
 class Program {
   static main(): void {
@@ -26,9 +26,8 @@ class Program {
     updateNameCommand.name = 'naruse'
     userApplicationService.update(updateNameCommand)
 
-    const updateMailAddressCommand = new UserUpdateCommand(id)
-    updateNameCommand.mailAddress = 'xxxx@example.com'
-    userApplicationService.update(updateMailAddressCommand)
+    const foundUser = userRepository.find(new UserId(id))
+    console.log(foundUser)
   }
 }
 

@@ -1,5 +1,5 @@
-import { CircleId } from './CircleId'
-import { User } from './User'
+import { CircleId } from '../circle/CircleId'
+import { User } from '../user/User'
 
 export class CircleMembers {
   readonly id: CircleId

@@ -1,4 +1,4 @@
-import { User } from './User'
+import { User } from '../../domain/user/User'
 
 export class UserData {
   readonly id: string

@@ -1,5 +1,5 @@
 import { Circle } from './Circle'
-import { UserRepository } from './UserRepository'
+import { UserRepository } from '../user/UserRepository'
 
 export class CircleFullSpecification {
   private readonly userRepository: UserRepository

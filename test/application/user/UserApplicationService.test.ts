@@ -1,11 +1,11 @@
-import { InMemoryUserFactory } from '../src/InMemoryUserFactory'
-import { InMemoryUserRepository } from '../src/InMemoryUserRepository'
-import { User } from '../src/User'
-import { UserApplicationService } from '../src/UserApplicationService'
-import { UserId } from '../src/UserId'
-import { UserName } from '../src/UserName'
-import { UserRegisterCommand } from '../src/UserRegisterCommand'
-import { UserService } from '../src/UserService'
+import { InMemoryUserFactory } from '../../../src/infrastructure/user/InMemoryUserFactory'
+import { InMemoryUserRepository } from '../../../src/infrastructure/user/InMemoryUserRepository'
+import { User } from '../../../src/domain/user/User'
+import { UserApplicationService } from '../../../src/application/user/UserApplicationService'
+import { UserId } from '../../../src/domain/user/UserId'
+import { UserName } from '../../../src/domain/user/UserName'
+import { UserRegisterCommand } from '../../../src/application/user/UserRegisterCommand'
+import { UserService } from '../../../src/domain/user/UserService'
 
 describe('UserRegisterTest', () => {
   const userFactory = new InMemoryUserFactory()

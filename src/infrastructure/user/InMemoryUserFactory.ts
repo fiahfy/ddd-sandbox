@@ -1,7 +1,7 @@
-import { User } from './User'
-import { UserFactory } from './UserFactory'
-import { UserId } from './UserId'
-import { UserName } from './UserName'
+import { User } from '../../domain/user/User'
+import { UserFactory } from '../../domain/user/UserFactory'
+import { UserId } from '../../domain/user/UserId'
+import { UserName } from '../../domain/user/UserName'
 
 export class InMemoryUserFactory implements UserFactory {
   private currentId = 0
